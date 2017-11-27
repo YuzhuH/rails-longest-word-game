@@ -1,0 +1,16 @@
+<h1>******** Welcome to the longest word-game!********</h1>
+<h2>Here is your grid:</h2>
+<h2><%=@letters%></h2>
+
+
+
+
+
+<form action="/scores" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="question">Please input your word</label>
+  <input type="hidden" name="start_time" value='<%=@time_now%>'>
+  <input type="hidden" name="letters" value='<%=@letters%>'>
+  <input type="text" id="question" name="answer" placeholder="Answer">
+  <input type="submit" value="Go on!">
+</form>

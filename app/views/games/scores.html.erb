@@ -1,0 +1,8 @@
+<h2>Random letters : <%= @letters %></h2>
+<h2>Total Time : <%= @result[:time].round(2) %> seconds</h2>
+<h2> Score : <%=@result[:score].round(2)%></h2>
+<h2><%=@result[:message]%></h2>
+
+
+<%= link_to "Play a new game!", play_path %>
+
